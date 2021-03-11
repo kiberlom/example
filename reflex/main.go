@@ -1,18 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
-)
+import "fmt"
+
+func d(y int) {
+	y++
+	fmt.Println(y)
+}
 
 func main() {
-	s := struct {
-		string
-		int
-	}{"dssa", 12}
-
-	v := reflect.ValueOf(s)
-
-	fmt.Printf("%#v\n", v)
-	fmt.Println(v.Kind().String())
+	x := 1
+	d(x)
+	fmt.Println(x)
 }
